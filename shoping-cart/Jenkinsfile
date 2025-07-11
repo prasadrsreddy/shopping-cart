@@ -1,6 +1,6 @@
 node {
     stage('Clone Repo') {
-        git 'https://github.com/prasadrsreddy/shopping-cart.git'
+        git branch: 'main', url: 'https://github.com/prasadrsreddy/shopping-cart.git'
     }
 
     stage('Build with Maven') {
