@@ -1,0 +1,15 @@
+#!/bin/bash
+
+correct_user = "Admin"
+correct_pass = "devops123"
+
+read -p "username: " user
+read -s "password: " pass
+
+echo
+ if [["$user" == "$correct_user" && "$pass" == "correct_pass"]]; then
+  echo " Login successfull.welcome,$user!"
+
+ else
+  echo "Invalid username or password .Access Denied"
+ fi
