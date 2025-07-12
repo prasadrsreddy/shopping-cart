@@ -1,15 +1,19 @@
 node {
     stage('Clone Repo') {
-        git 'https://github.com/prasadrsreddy/shopping-cart.git'
+        git branch: 'main', url: 'https://github.com/prasadrsreddy/shopping-cart.git'
     }
 
     stage('Build with Maven') {
         def mvnHome = tool(name: 'maven 3.9.10', type: 'maven')
-        sh "${mvnHome}/bin/mvn clean package"
+        dir('shoping-cart') {
+           sh "${mvnHome}/bin/mvn clean package"
+        } 
     }
 
     stage('Deploy WAR to Tomcat') {
-        sh 'cp target/*.war /opt/tomcat/webapps'
+        dir('shoping-cart') {
+          sh 'cp target/*.war /opt/tomcat/webapps'
+        }
     }
 
     stage('Restart Tomcat') {
@@ -18,6 +22,6 @@ node {
     }
 
     stage('Health Check') {
-        sh 'curl -I http://localhost:8080/your-app-name/'
+        sh 'curl -I http://localhost:8080/shoping-cart/'
     }
 }

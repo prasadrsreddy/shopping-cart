@@ -71,11 +71,22 @@
 			<version>2.3.1</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>1.15</version>
 		</dependency>
+<<<<<<< HEAD
 	</dependencies>
+=======
+		
+        <!-- JUnit for AppTest.java -->
+		<dependency>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                    <version>4.13.2</version>
+                    <scope>test</scope>
+                </dependency>
+         </dependencies>
+>>>>>>> 80f567f17dcccfa3df8dcec43cd811378675a2e3
 </project>
