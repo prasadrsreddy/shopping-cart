@@ -76,10 +76,7 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.15</version>
 		</dependency>
-<<<<<<< HEAD
 	</dependencies>
-=======
-		
         <!-- JUnit for AppTest.java -->
 		<dependency>
                     <groupId>junit</groupId>
@@ -88,5 +85,4 @@
                     <scope>test</scope>
                 </dependency>
          </dependencies>
->>>>>>> 80f567f17dcccfa3df8dcec43cd811378675a2e3
 </project>
